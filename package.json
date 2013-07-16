@@ -1,0 +1,24 @@
+{
+  "name": "Ember-seo",
+  "preferGlobal": true,
+  "version": "0.3.0",
+  "author": "Mathieu Breton mbreton@xebia.fr",
+  "description": "Demonstration to how index your Ember Application by Google",
+  "contributors": [ 
+    {
+      "name": "Mathieu Breton",
+      "email": "mbreton@xebia.fr"
+    } 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xebia-france/ember-seo.git"
+  },
+  "dependencies" : {
+    "express"   :  "*"
+  },  
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.11"
+  }
+}
