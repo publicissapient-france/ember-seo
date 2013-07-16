@@ -15,7 +15,8 @@
     "url": "https://github.com/xebia-france/ember-seo.git"
   },
   "dependencies" : {
-    "express"   :  "*"
+    "express"   :  "*",
+    "node-phantom" : "*"
   },  
   "license": "MIT",
   "engines": {

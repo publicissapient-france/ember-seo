@@ -1,4 +1,9 @@
-/* Put your CSS here */
-html, body {
-    margin: 20px;
+footer{
+	background: #333;
+	padding: 10px;
+	color: #666;
+	font-family: "Proxima Nova Condensed", "proxima-nova-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 13px;
 }
