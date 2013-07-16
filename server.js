@@ -7,7 +7,7 @@ var app = express();
 
 app.configure(function () {
     app.use(express.bodyParser());
-    //app.use(express.static(__dirname));
+    app.use(express.static(__dirname));
 });
 
 app.get('/', function(req, res){
@@ -33,7 +33,7 @@ app.get('/', function(req, res){
   }
   else{
     // If there is no _escaped_fragment_, we return the normal index template.
-    console.log('Bot : '+eq.query._escaped_fragment_);
+    console.log('Bot : '+req.query._escaped_fragment_);
     res.render('index');
   }
 });
