@@ -8,11 +8,9 @@ app.configure(function () {
     app.use(express.logger());
 });
 
-app.get('/', function(request, response) {
-  res.send('index');
-});
-
 var port = process.env.PORT || 5000;
+
+app.use(express.static(__dirname));
 
 app.listen(port);
 console.log('Listening on port '+port+'...');
