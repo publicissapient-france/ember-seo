@@ -16,7 +16,8 @@
   },
   "dependencies" : {
     "express"   :  "*",
-    "node-phantom" : "*"
+    "node-phantom" : "*",
+    "ejs" : "*"
   },  
   "license": "MIT",
   "engines": {

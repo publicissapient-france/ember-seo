@@ -6,8 +6,13 @@ var port = process.env.PORT || 5000;
 var app = express();
 
 app.configure(function () {
-    app.use(express.bodyParser());
-    app.use(express.static(__dirname));
+    // disable layout
+  app.set("view options", {layout: false});
+  //app.set('views', __dirname);
+ 
+  // make a custom html template
+  app.use(express.static(__dirname));
+  app.engine('html', require('ejs').renderFile);
 });
 
 app.get('/', function(req, res){
@@ -15,7 +20,7 @@ app.get('/', function(req, res){
   // generate the static HTML that should normally return the Javascript
   if(typeof(req.query._escaped_fragment_) !== "undefined") {
   	console.log('Bot : '+req.query._escaped_fragment_);
-    /*phantom.create(function(err, ph) {
+    phantom.create(function(err, ph) {
       return ph.createPage(function(err, page) {
         // We open phantomJS at the proper page.
         return page.open("https://localhost:3000/#!" + req.query._escaped_fragment_, function(status) {
@@ -29,12 +34,12 @@ app.get('/', function(req, res){
           });
         });
       });
-    });*/
+    });
   }
   else{
     // If there is no _escaped_fragment_, we return the normal index template.
     console.log('Bot : '+req.query._escaped_fragment_);
-    res.render('index');
+    res.render('index.html');
   }
 });
 
